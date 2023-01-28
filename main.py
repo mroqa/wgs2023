@@ -48,12 +48,12 @@ sheets = [
     "ECONOMICS",
 ]
 
-health = pd.read_excel("./assets/Alldata.xlsx", sheets[0])
-energy = pd.read_excel("./assets/Alldata.xlsx", sheets[1])
-quality = pd.read_excel("./assets/Alldata.xlsx", sheets[2])
-education = pd.read_excel("./assets/Alldata.xlsx", sheets[3])
-sustainability = pd.read_excel("./assets/Alldata.xlsx", sheets[4])
-economics = pd.read_excel("./assets/Alldata.xlsx", sheets[5])
+health = pd.read_excel("https://github.com/mroqa/wgs2023/blob/master/assets/Alldata.xlsx", sheets[0])
+energy = pd.read_excel("https://github.com/mroqa/wgs2023/blob/master/assets/Alldata.xlsx", sheets[1])
+quality = pd.read_excel("https://github.com/mroqa/wgs2023/blob/master/assets/Alldata.xlsx", sheets[2])
+education = pd.read_excel("https://github.com/mroqa/wgs2023/blob/master/assets/Alldata.xlsx", sheets[3])
+sustainability = pd.read_excel("https://github.com/mroqa/wgs2023/blob/master/assets/Alldata.xlsx", sheets[4])
+economics = pd.read_excel("https://github.com/mroqa/wgs2023/blob/master/assets/Alldata.xlsx", sheets[5])
 
 options_health = [
     {"label": "Health Expenditure", "value": "Health Expenditure"},
@@ -158,7 +158,7 @@ line_options = [deaths, energy, lifeQuality, eduData, sustain_climate, ecodata]
 
 
 def get_info(categoryId, optionName):
-    data = pd.read_excel("./assets/Alldata.xlsx", sheets[categoryId])
+    data = pd.read_excel("https://github.com/mroqa/wgs2023/blob/master/assets/Alldata.xlsx", sheets[categoryId])
     data = data[data.cause == optionName]
     data = data[data.data != "as % of global electricity production"]
     data = data[data.data != "deaths"]
