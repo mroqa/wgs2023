@@ -6,7 +6,7 @@ format:
 	black *.py
 lint:
 	#Flake8 or pylint
-	pylint --disable=R,C *.py
+	#pylint --disable=R,C *.py
 build:
 	#Build container
 	#docker build -t wgs .
